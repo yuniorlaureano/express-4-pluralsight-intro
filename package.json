@@ -1,26 +1,33 @@
 {
-  "name": "express-4-pluralsight-intro",
-  "version": "1.0.0",
-  "description": "a course of express",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/yuniorlaureano/express-4-pluralsight-intro.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/yuniorlaureano/express-4-pluralsight-intro/issues"
-  },
-  "homepage": "https://github.com/yuniorlaureano/express-4-pluralsight-intro#readme",
-  "dependencies": {
-    "bootstrap": "^4.3.1",
-    "chalk": "^2.4.2",
-    "debug": "^2.6.6",
-    "express": "^4.16.4",
-    "jquery": "^3.4.0"
-  }
+    "name": "express-4-pluralsight-intro",
+    "version": "1.0.0",
+    "description": "a course of express",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "set DEBUG=app & node app.js",
+        "lint": "eslint app.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/yuniorlaureano/express-4-pluralsight-intro.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/yuniorlaureano/express-4-pluralsight-intro/issues"
+    },
+    "homepage": "https://github.com/yuniorlaureano/express-4-pluralsight-intro#readme",
+    "dependencies": {
+        "bootstrap": "^4.3.1",
+        "chalk": "^2.4.2",
+        "debug": "^2.6.6",
+        "express": "^4.16.4",
+        "jquery": "^3.4.0",
+        "morgan": "^1.9.1",
+        "nodemon": "^1.18.11"
+    },
+    "devDependencies": {
+        "eslint": "^5.16.0"
+    }
 }
