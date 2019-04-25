@@ -12,6 +12,8 @@ function router(info) {
         const { id } = req.params;
         res.render('single', { title: "MyApp", list: ['a', 'b'] });
     });
+
+    return bookRouter;
 }
 
 
