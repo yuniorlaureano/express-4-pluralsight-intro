@@ -3,11 +3,22 @@ var chalk = require('chalk');
 var debug = require('debug')('app');
 var path = require('path');
 var morgan = require('morgan');
+var passport = require('passport');
+var cookieParser = require('cookie-parser');
+var session = require('express-session');
+var bodyParser = require('body-parser');
 
 var app = express();
 const port = process.env.PORT || 3000;
 
 app.use(morgan('tiny'));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(cookieParser());
+app.use(session({ secret: 'library' }));
+
+require('./src/config/passport.js')(app);
+
 app.use(express.static(path.join(__dirname, '/public/')));
 app.use('/css', express.static(path.join(__dirname, 'node_modules/bootstrap/dist/css')));
 app.use('/js', express.static(path.join(__dirname, 'node_modules/bootstrap/dist/js')));
