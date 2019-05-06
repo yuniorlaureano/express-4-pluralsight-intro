@@ -1,9 +1,10 @@
 var express = require('express');
-
+const bookController = require('../controllers/bookController');
 const bookRouter = express.Router();
 
 
 function router(info) {
+    const { getIndex } = bookController(nav);
     bookRouter.route('/').get((req, res) => {
         res.render('group', { title: "MyApp", list: ['a', 'b'] });
     });
